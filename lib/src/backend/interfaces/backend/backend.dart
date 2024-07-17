@@ -43,7 +43,7 @@ abstract interface class FMTCBackend {
   /// OS can clear these without notice at any time.
   /// {@endtemplate}
   Future<void> initialise({
-    String? rootDirectory,
+    required String rootDirectory,
   });
 
   /// {@template fmtc.backend.uninitialise}

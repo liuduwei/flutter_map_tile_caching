@@ -114,7 +114,7 @@ class _ObjectBoxBackendImpl implements FMTCObjectBoxBackendInternal {
   // Lifecycle implementations
 
   Future<void> initialise({
-    required String? rootDirectory,
+    required String rootDirectory,
     required int maxDatabaseSize,
     required String? macosApplicationGroup,
     required bool useInMemoryDatabase,
@@ -132,14 +132,10 @@ class _ObjectBoxBackendImpl implements FMTCObjectBoxBackendInternal {
 
     // Construct the root directory path
     if (useInMemoryDatabase) {
-      this.rootDirectory = Store.inMemoryPrefix + (rootDirectory ?? 'fmtc');
+      this.rootDirectory = Store.inMemoryPrefix + rootDirectory;
     } else {
       await Directory(
-        this.rootDirectory = path.join(
-          rootDirectory ??
-              (await getApplicationDocumentsDirectory()).absolute.path,
-          'fmtc',
-        ),
+        this.rootDirectory = path.join(rootDirectory, 'fmtc'),
       ).create(recursive: true);
     }
 

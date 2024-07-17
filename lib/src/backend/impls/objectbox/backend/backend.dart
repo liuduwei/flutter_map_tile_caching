@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path;
-import 'package:path_provider/path_provider.dart';
 
 import '../../../../../flutter_map_tile_caching.dart';
 import '../../../export_internal.dart';
@@ -52,7 +51,7 @@ final class FMTCObjectBoxBackend implements FMTCBackend {
   /// Avoid using [useInMemoryDatabase] outside of testing purposes.
   @override
   Future<void> initialise({
-    String? rootDirectory,
+    required String rootDirectory,
     int maxDatabaseSize = 10000000,
     String? macosApplicationGroup,
     RootIsolateToken? rootIsolateToken,

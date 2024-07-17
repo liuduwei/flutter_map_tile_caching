@@ -26,7 +26,8 @@ void main() {
     'Basic store usage & root stats consistency',
     () {
       setUpAll(
-        () => FMTCObjectBoxBackend().initialise(useInMemoryDatabase: true),
+        () => FMTCObjectBoxBackend()
+            .initialise(rootDirectory: '', useInMemoryDatabase: true),
       );
 
       test(
@@ -169,7 +170,8 @@ void main() {
     'Metadata',
     () {
       setUpAll(() async {
-        await FMTCObjectBoxBackend().initialise(useInMemoryDatabase: true);
+        await FMTCObjectBoxBackend()
+            .initialise(rootDirectory: '', useInMemoryDatabase: true);
         await const FMTCStore('store').manage.create();
       });
 
@@ -267,7 +269,8 @@ void main() {
     'Tile operations & stats consistency',
     () {
       setUpAll(() async {
-        await FMTCObjectBoxBackend().initialise(useInMemoryDatabase: true);
+        await FMTCObjectBoxBackend()
+            .initialise(rootDirectory: '', useInMemoryDatabase: true);
         await const FMTCStore('store1').manage.create();
         await const FMTCStore('store2').manage.create();
       });
