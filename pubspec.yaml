@@ -6,6 +6,7 @@ version: 9.1.4
 repository: https://github.com/JaffaKetchup/flutter_map_tile_caching
 issue_tracker: https://github.com/JaffaKetchup/flutter_map_tile_caching/issues
 documentation: https://fmtc.jaffaketchup.dev
+publish_to: none
 
 funding:
   - https://github.com/sponsors/JaffaKetchup
@@ -36,7 +37,7 @@ dependencies:
   flutter_map:
     git:
       url: https://github.com/fleaflet/flutter_map.git
-      ref: master
+      ref: 182c4fc0c73411e2be10774dd227d0da9cf4276a
   http: ^1.2.1
   latlong2: ^0.9.1
   meta: ^1.12.0

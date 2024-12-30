@@ -17,8 +17,14 @@ dependencies:
   file_picker: ^8.0.3
   flutter:
     sdk: flutter
-  flutter_map: ^7.0.2
-  flutter_map_animations: ^0.7.0
+  flutter_map:
+    git:
+      url: https://github.com/fleaflet/flutter_map.git
+      ref: master
+  flutter_map_animations: 
+    git:
+      url: https://github.com/liuduwei/flutter_map_animations.git
+      ref: main
   flutter_map_tile_caching:
   google_fonts: ^6.2.1
   gpx: ^2.2.2
