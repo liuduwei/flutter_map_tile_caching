@@ -36,7 +36,7 @@ dependencies:
     sdk: flutter
   flutter_map:
     git:
-      url: https://github.com/fleaflet/flutter_map.git
+      url: https://github.com/liuduwei/flutter_map.git
       ref: 182c4fc0c73411e2be10774dd227d0da9cf4276a
   http: ^1.2.1
   latlong2: ^0.9.1
