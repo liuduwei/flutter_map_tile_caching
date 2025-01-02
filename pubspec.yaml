@@ -37,7 +37,7 @@ dependencies:
   flutter_map:
     git:
       url: https://github.com/liuduwei/flutter_map.git
-      ref: 182c4fc0c73411e2be10774dd227d0da9cf4276a
+      ref: acme
   http: ^1.2.1
   latlong2: ^0.9.1
   meta: ^1.12.0
